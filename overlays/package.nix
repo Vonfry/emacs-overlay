@@ -13,15 +13,15 @@ self: super:
           };
 
           elpaDevelPackages = esuper.elpaDevelPackages.override {
-            generated = ../repos/elpa/elpa-devel-generated.nix;
+            archiveJson = ../repos/melpa/recipes-archive-elpa-devel.json;
           };
 
           elpaPackages = esuper.elpaPackages.override {
-            generated = ../repos/elpa/elpa-generated.nix;
+            archiveJson = ../repos/melpa/recipes-archive-elpa.json;
           };
 
           nongnuPackages = esuper.nongnuPackages.override {
-            generated = ../repos/nongnu/nongnu-generated.nix;
+            archiveJson = ../repos/melpa/recipes-archive-nongnu.json;
           };
 
         in
